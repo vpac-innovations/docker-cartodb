@@ -51,7 +51,7 @@ var config = {
         type: "postgis",
         user: "publicuser",
         password: "public",
-        host: '127.0.0.1',
+        host: 'postgres',
         port: 5432,
         extent: "-20037508.3,-20037508.3,20037508.3,20037508.3",
         /* experimental
@@ -147,7 +147,7 @@ var config = {
         cache_basedir: '/tmp/cdb-tiler-dev/millstone-dev'
     }
     ,redis: {
-        host: '127.0.0.1',
+        host: 'postgres',
         port: 6379,
         // Max number of connections in each pool.
         // Users will be put on a queue when the limit is hit.

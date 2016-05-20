@@ -26,7 +26,7 @@ module.exports.db_user_pass = '<%= user_password %>'
 module.exports.db_pubuser   = 'publicuser';
 // Password for the anonymous PostgreSQL user
 module.exports.db_pubuser_pass   = 'public';
-module.exports.db_host      = 'localhost';
+module.exports.db_host      = 'postgres';
 module.exports.db_port      = '5432';
 // Max database connections in the pool
 // Subsequent connections will wait for a free slot.
@@ -47,7 +47,7 @@ module.exports.db_pool_reapInterval = 1000;
 //    enabled: true,
 //    initialDelay: 5000
 //};
-module.exports.redis_host   = '127.0.0.1';
+module.exports.redis_host   = 'postgres';
 module.exports.redis_port   = 6379;
 module.exports.redisPool    = 50;
 module.exports.redisIdleTimeoutMillis   = 100;
