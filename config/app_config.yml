@@ -48,7 +48,7 @@ defaults: &defaults
       endpoint:   '/api/v2/sql'
       port:       80
   api_requests_service_url: ''
-  developers_host:    'http://developers.cartodb.localhost:3000'
+  developers_host:    'http://cartodb.localhost:3000'
   google_analytics:
     primary:          ''
     embeds:           ''
@@ -99,9 +99,13 @@ defaults: &defaults
         like_map: ''
         trending_map: ''
   common_data:
-    protocol: 'https'
+    #protocol: 'https'
+    #username: 'common-data'
+    #base_url: 'https://common-data.cartodb.com'
+    #format: 'shp'
+    protocol: 'http'
     username: 'common-data'
-    base_url: 'https://common-data.cartodb.com'
+    base_url: 'http://cartodb.localhost/user/common-data'
     format: 'shp'
   explore_api:
     username: ''
@@ -327,7 +331,7 @@ defaults: &defaults
     VicMap:
       WEB_MERCATOR:
         default: true
-        url: 'http://192.168.99.100:8282/tiles/vicmap/webmercator/{z}/{x}/{y}.png'
+        url: 'http://cartodb.localhost:8282/tiles/vicmap/webmercator/{z}/{x}/{y}.png'
         minZoom: '0'
         maxZoom: '18'
         name: 'Positron'
