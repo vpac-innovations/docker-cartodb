@@ -77,6 +77,7 @@ RUN useradd -m -d /home/cartodb -s /bin/bash cartodb &&\
     pgtune \
     libgmp-dev \
     libicu-dev \
+    postgresql-client-9.3 \
   --no-install-recommends && \
   rm -rf /var/lib/apt/lists/*
 
@@ -117,6 +118,8 @@ RUN git clone git://github.com/CartoDB/Windshaft-cartodb.git && \
       cd Windshaft-cartodb && ./configure && npm install && mkdir logs
 
 # Install CartoDB (with the bug correction on bundle install)
+RUN mkdir /data
+COPY ./data /data
 RUN mkdir /cartodb
 COPY ./cartodb /cartodb
 RUN cd /cartodb && \
@@ -155,5 +158,6 @@ EXPOSE 3000 8080 8181
 ENV GDAL_DATA /usr/share/gdal/1.10
 
 ADD ./startup.sh /opt/startup.sh
+ADD ./import_default_data.sh /cartodb/import_default_data.sh
 
 CMD ["/bin/bash", "/opt/startup.sh"]
