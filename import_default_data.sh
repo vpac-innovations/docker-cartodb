@@ -10,7 +10,7 @@ done
 
 echo "UPDATE visualizations SET privacy = 'public';" | psql -U postgres -h postgres -d carto_db_development
 # GRANT imported table to SELECT access
-COMMON_DATA_DATABASE=cartodb_dev_user_3be5d2dc-eab4-4067-b6a9-f32b3b26bc8b_db
+COMMON_DATA_DATABASE=`psql -U postgres -h postgres -d carto_db_development -t -c "SELECT database_name FROM users WHERE username='common-data';"`
 
 echo "GRANT SELECT ON public.sa1_2011_aust TO publicuser;" | psql -U postgres -h postgres -d $COMMON_DATA_DATABASE
 echo "GRANT SELECT ON public.sa2_2011_aust TO publicuser;" | psql -U postgres -h postgres -d $COMMON_DATA_DATABASE
