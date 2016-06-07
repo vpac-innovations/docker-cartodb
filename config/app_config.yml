@@ -228,8 +228,8 @@ defaults: &defaults
     background:
       kind: "background"
       options: { color: '#ffffff' }
-  cartodb_com_hosted: false
-  cartodb_central_domain_name: 'cartodb.localhost'
+  #cartodb_com_hosted: false
+  #cartodb_central_domain_name: 'cartodb.localhost'
   aws:
     s3:
       access_key_id: "test"
@@ -268,9 +268,9 @@ defaults: &defaults
       client_id:            ''
       client_secret:        ''
       callback_url:         'http://cartodb.com'
-    google_plus:
-      client_id: ''
-      cookie_policy: 'single_host_origin'
+    #google_plus:
+      #client_id: ''
+      #cookie_policy: 'single_host_origin'
       #cookie_policy: 'https://cartodb-staging.com'
     dropbox:
       app_key:              ''
@@ -332,7 +332,7 @@ defaults: &defaults
         maxZoom: '18'
         name: 'Positron'
         className: 'positron_rainbow'
-        attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href= "http://cartodb.com/attributions#basemaps">CartoDB</a>'
+        attribution: 'Vicmap API © 2015 State Government of Victoria | <a href="http://api.maps.vic.gov.au/vicmapapi/Copyright.jsp">Copyright and Disclaimer</a>'
 
 
 development:
