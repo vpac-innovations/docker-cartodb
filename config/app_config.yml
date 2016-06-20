@@ -327,7 +327,7 @@ defaults: &defaults
     VicMap:
       WEB_MERCATOR:
         default: true
-        url: 'http://mapproxy:8282/tiles/vicmap/webmercator/{z}/{x}/{y}.png'
+        url: 'http://<mapproxy hostname>/tiles/vicmap/webmercator/{z}/{x}/{y}.png'
         minZoom: '0'
         maxZoom: '18'
         name: 'Positron'
