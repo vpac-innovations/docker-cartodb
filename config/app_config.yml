@@ -333,7 +333,18 @@ defaults: &defaults
         name: 'Positron'
         className: 'positron_rainbow'
         attribution: 'Vicmap API © 2015 State Government of Victoria | <a href="http://api.maps.vic.gov.au/vicmapapi/Copyright.jsp">Copyright and Disclaimer</a>'
-
+    CartoDB:
+      positron_rainbow_labels:
+        default: false
+        url: 'http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png'
+        subdomains: 'abcd'
+        minZoom: '0'
+        maxZoom: '18'
+        name: 'Positron'
+        className: 'positron_rainbow_labels'
+        attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://cartodb.com/attributions">CartoDB</a>'
+        labels:
+          url: 'http://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png'
 
 development:
   <<: *defaults
